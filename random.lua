@@ -57,7 +57,7 @@ function random.seed(connection)
 	local result = dbPoll(qh, -1)
 
 	if not result or #result == 0 then
-		error("Failed to seed random: no result from database")
+		outputDebugString("Failed to seed random: no result from database", 1)
 		return false
 	end
 
